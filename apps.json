@@ -22,6 +22,14 @@
       "category": "utilities",
       "asset": "^UTM\\.ipa$",
       "releases": 2
+    },
+    {
+      "repo": "willfaust/Madeira",
+      "name": "Madeira",
+      "description": "Run x86-64 Windows games on iPhone via Wine ARM64EC, FEX-Emu and DXMT.",
+      "category": "games",
+      "asset": "\\.ipa$",
+      "releases": 2
     }
   ]
 }
