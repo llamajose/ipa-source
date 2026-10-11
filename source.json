@@ -5,6 +5,7 @@
   "iconURL": "https://github.com/llamajose.png",
   "website": "https://github.com/llamajose/ipa-source",
   "tintColor": "#7C5CFF",
+  "sourceURL": "https://raw.githubusercontent.com/llamajose/ipa-source/main/source.json",
   "apps": [
     {
       "name": "SideStore",
@@ -45,7 +46,12 @@
           "NSLocalNetworkUsageDescription": "SideStore can use local network access to discover Bonjour (mDNS) services on your network. This is not required for core functionality."
         }
       },
-      "_repo": "SideStore/SideStore"
+      "_repo": "SideStore/SideStore",
+      "version": "0.7.0-20260911.328+6032424a",
+      "versionDate": "2026-09-15",
+      "versionDescription": "## Build Info\r\n\r\nBuilt at (UTC): `Fri Sep 11 21:25:58 2026`\r\nBuilt at (UTC date): `2026-09-11`\r\nCommit SHA: `6032424a0e56c1c319762e786099bdd9186a238b`\r\nVersion: `0.7.0-20260911.328+6032424a`\r\n\r\n#### What's Changed:\r\n- **fixes for 503 during sign-in**: There were some changes from apple server side which broke 0.6.4 and prior versions and prevent them from signing into sidestore. This temporary version addresses the sign-in issue with 503 status code\r\n\r\n#### Full Changelog: [0.6.4...0.7.0-alpha](https://github.com/SideStore/SideStore/compare/0.6.4...0.7.0-alpha)",
+      "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.7.0-alpha/SideStore.ipa",
+      "size": 27770821
     },
     {
       "name": "UTM",
@@ -96,7 +102,12 @@
           "NSMicrophoneUsageDescription": "Permission is required for any virtual machine to record from the microphone."
         }
       },
-      "_repo": "utmapp/UTM"
+      "_repo": "utmapp/UTM",
+      "version": "4.7.5",
+      "versionDate": "2026-01-03",
+      "versionDescription": "## Highlights\r\n* **QEMU v10.0.2**: The backend has been updated to the latest upstream QEMU which brings with it a variety of bug fixes and performance improvements.\r\n* **Liquid Glass**: UTM adopts the Liquid Glass design on *OS 26.\r\n* **App Intents**: New support for automation with Shortcuts.\r\n* **Keyboard Shortcuts**: Define custom key combinations (such as Ctrl+Alt+Del) that can be sent to the VM from the new Keyboard menu.\r\n* **Improved Wizard**: Simplify the creation of emulated machines by selecting from a list of well-supported configurations. The updated wizard can create more working configurations such as RISC-V64 Ubuntu, classic Mac OS 8.x/9.x, and Windows 95/98.\r\n\r\n## Changes (v4.7.5)\r\n* Fixed some rare conditions that could lead to a VM fail to start and spin infinitely\r\n* Fixed some rare crashes that can happen after a VM stops\r\n* Fixed parsing of file paths with commas in the name (thanks @nikolan123)\r\n* ANGLE: Fixed a memory leak issue in the GLES backend (#7546) (thanks @cnnn)\r\n* ANGLE: Fixed a memory leak issue in the Metal backend (#4958)\r\n* Localization: Updated Chinese (Hong Kong, Simplified) (thanks @changanmoon)\r\n* (macOS) Fixed App Intents on macOS 26 (#7412) (thanks @peterneutron)\r\n* (macOS) Fixed an error when file locking is disabled and a removable drive with no image selected is started (#7527)\r\n* (macOS) AVF: Fixed shared directory disconnecting when window is resized (#7488) (thanks @evan314159)\r\n* Hotfix: (1/3/25) An earlier release of v4.7.5 has an issue that prevented VMs from starting. Make sure you are on build 118.\r\n\r\n## Changes (v4.7.4)\r\n* (macOS) Fixed a crash on VM start when a toolbar menu was reinitialized (note v4.7.4 was re-released to address this) (#7408)\r\n* Home: Fixed layout issue with button titles\r\n* (macOS) Fixed a crash when VM exits while USB is active\r\n* (iOS) Support for StikDebug on iOS 26 (non-SE only)\r\n\r\n## Changes (v4.7.3)\r\n* Fixed a crash when starting a VM results in a block device error\r\n* Stop button can now be used a second time to force kill a VM if it is unresponsive after stopping for the first time\r\n* libusb: Fixed multiple race conditions that caused crashes when using USB capture\r\n* CocoaSpice: Fixed multiple race conditions that caused crashes during VM start\r\n* Localization: Updated Chinese (Hong Kong, Simplified) (thanks @changanmoon)\r\n* (macOS) Scripting: Fixed broken commands due to name collision (#7360)\r\n* (macOS) Fixed crash when exiting full screen (#7377)\r\n\r\n## Changes (v4.7.2)\r\n* (macOS) AVF: Fixed a crash when starting any Apple Virtualization VM (#7355) (We are re-releasing v4.7.2 with build 112 due to this critical bug.)\r\n* Home: Display network details and active IP addresses on the home details screen (thanks @gabefair)\r\n* Home: Show a security warning message when importing a .utm with custom arguments (#6252)\r\n* Config: Option to reset UEFI without pre-loading Secure Boot keys (useful for custom TPM configurations) (#7005)\r\n* Config: Pre-loading Secure Boot keys will now install Microsoft UEFI 2023 certificates (#7257)\r\n* Config: When PS/2 device is enabled, no longer create USB mouse and keyboard devices. This allows older Windows install to work out of the box.\r\n* Config: Quotes in custom arguments are no longer stripped (unless the only quotes wrap the entire argument) (#6343)\r\n* Config: Provide a fixed serial number for VirtIO block devices (#7332)\r\n* QEMU: Fixed an issue which causes Windows 98 to BSoD (#7342)\r\n* QEMU: Do not create a default floppy drive when -nodefaults is used. UTM configuration will set up a FDC device and this is the only way to set up bootindex for floppy.\r\n* Wizard: Legacy Windows configurations will now use PS/2 controller by default\r\n* Wizard: Update OS logos to be consistent with other icons\r\n* Wizard: Windows + i440fx hardware will now instantiate default devices (sound, VGA, networking) that should work with Windows 95/98\r\n* Wizard: Add additional supported hardware configurations for running older Windows",
+      "downloadURL": "https://github.com/utmapp/UTM/releases/download/v4.7.5/UTM.ipa",
+      "size": 130058389
     }
   ],
   "news": []

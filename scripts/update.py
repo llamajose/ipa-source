@@ -139,6 +139,16 @@ def update_app(entry, existing):
     if meta:
         app["appPermissions"] = {"entitlements": meta["entitlements"], "privacy": meta["privacy"]}
     app.setdefault("appPermissions", {"entitlements": [], "privacy": {}})
+
+    # Legacy flat fields (AltStore v1 layout) for ESign, Scarlet, GBox, etc.
+    latest = versions[0]
+    app.update({
+        "version": latest["version"],
+        "versionDate": latest["date"][:10],
+        "versionDescription": latest.get("localizedDescription", ""),
+        "downloadURL": latest["downloadURL"],
+        "size": latest["size"],
+    })
     return app
 
 
@@ -160,6 +170,8 @@ def main():
             apps.append(app)
 
     out = {k: v for k, v in config["source"].items()}
+    repo = os.environ.get("GITHUB_REPOSITORY", "llamajose/ipa-source")
+    out.setdefault("sourceURL", f"https://raw.githubusercontent.com/{repo}/main/source.json")
     out["apps"] = apps
     out.setdefault("news", source.get("news", []))
     SOURCE.write_text(json.dumps(out, indent=2, ensure_ascii=False) + "\n")
