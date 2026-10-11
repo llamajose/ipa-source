@@ -1,0 +1,27 @@
+{
+  "source": {
+    "name": "Llama's Source",
+    "identifier": "lol.llamaa.source",
+    "subtitle": "Auto-updated IPAs from GitHub releases",
+    "iconURL": "https://github.com/llamajose.png",
+    "website": "https://github.com/llamajose/ipa-source",
+    "tintColor": "#7C5CFF"
+  },
+  "apps": [
+    {
+      "repo": "SideStore/SideStore",
+      "name": "SideStore",
+      "description": "Sideload apps on-device without a computer.",
+      "category": "utilities",
+      "releases": 2
+    },
+    {
+      "repo": "utmapp/UTM",
+      "name": "UTM",
+      "description": "Virtual machines for iOS.",
+      "category": "utilities",
+      "asset": "^UTM\\.ipa$",
+      "releases": 2
+    }
+  ]
+}
