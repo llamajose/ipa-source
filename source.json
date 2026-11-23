@@ -199,6 +199,79 @@
       "downloadURL": "https://github.com/willfaust/Madeira/releases/download/v0.2.0/Madeira-0.2.0.ipa",
       "size": 186400561,
       "_repo": "willfaust/Madeira"
+    },
+    {
+      "name": "StikDebug",
+      "bundleIdentifier": "com.stik.stikdebug",
+      "developerName": "StephenDev0",
+      "subtitle": "",
+      "localizedDescription": "On-device JIT enabler and debugger using a pairing file and LocalDevVPN.",
+      "iconURL": "https://github.com/StephenDev0.png",
+      "category": "developer",
+      "versions": [
+        {
+          "version": "3.2.2",
+          "buildVersion": "1",
+          "date": "2026-11-08T22:05:57Z",
+          "localizedDescription": "- Fix Utsuro, Henge, and \"MeloCafe\"\n\n**Full Changelog**: https://github.com/StikDebug/StikDebug/compare/3.2.1...3.2.2",
+          "downloadURL": "https://github.com/StikDebug/StikDebug/releases/download/3.2.2/StikDebug-3.2.2.ipa",
+          "size": 16924687,
+          "minOSVersion": "17.4"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSLocalNetworkUsageDescription": "StikDebug needs access to devices on your local network so it can connect to the targets you add to the Device Library.",
+          "NSLocationAlwaysAndWhenInUseUsageDescription": "StikDebug uses location to stay running in the background and maintain your JIT connection.",
+          "NSLocationWhenInUseUsageDescription": "StikDebug uses location to stay running in the background and maintain your JIT connection."
+        }
+      },
+      "version": "3.2.2",
+      "versionDate": "2026-11-08",
+      "versionDescription": "- Fix Utsuro, Henge, and \"MeloCafe\"\n\n**Full Changelog**: https://github.com/StikDebug/StikDebug/compare/3.2.1...3.2.2",
+      "downloadURL": "https://github.com/StikDebug/StikDebug/releases/download/3.2.2/StikDebug-3.2.2.ipa",
+      "size": 16924687,
+      "_repo": "StephenDev0/StikDebug"
+    },
+    {
+      "name": "Andarium",
+      "bundleIdentifier": "com.imxieyi.andarium",
+      "developerName": "imxieyi",
+      "subtitle": "",
+      "localizedDescription": "Android 17 (LineageOS 24) running inside an app on iPhone and iPad. A14 or newer.",
+      "iconURL": "https://github.com/imxieyi.png",
+      "category": "utilities",
+      "versions": [
+        {
+          "version": "1.1",
+          "buildVersion": "16",
+          "date": "2026-11-22T18:45:39Z",
+          "localizedDescription": "### What's new\r\n- **Root access**: apps you allow in Magisk can now run as root. Turn on Root access on Home, and the next start installs the official Magisk app.\r\n- **AOT**: Android's system libraries now run from code translated ahead of time, so Android runs faster. It is on by default, in Performance on Home.\r\n- **120 Hz**: on a ProMotion iPhone or iPad, Android can now run at 120 Hz for smoother motion, using more battery. It is off until you turn it on in Performance on Home.\r\n- **Add to Home Screen**: on iPhone and iPad with iOS 27, put an Android app's icon on the Home Screen, and open the app from there, from Shortcuts or with Siri.\r\n- **VoiceOver and TalkBack**: Andarium now works with VoiceOver. To hear Android's screen, turn on TalkBack under Accessibility.\r\n- **Frame rate when hot**: Android now lowers the frame rate only when the device is very hot. To keep it even then, set When hot to Full frame rate under Performance.\r\n- **Text messages**: Android can now receive a text message that you write. Choose Send text message… in Settings while Android is running, and it arrives as an incoming text.\r\n- **Update notice**: when a newer version is out, Home tells you and shows how to update. It checks once a day, and you can turn it off in Info.\r\n- **iOS 26**: the app now runs on iOS 26 or later.\r\n- Fixes:\r\n  - Fixed the virtual machine's Wi-Fi dropping briefly when you return to Andarium\r\n  - Fixed face scans failing in some apps that use the front camera\r\n  - Fixed connections hanging after the device moves from Wi-Fi to cellular data\r\n  - Fixed apps failing to reach servers for a while after the network returns\r\n  - VP9 videos now play with the device's hardware decoder\r\n\r\n### Sideloading\r\nYou can sideload the app with [AltStore](https://altstore.io) or [SideStore](https://sidestore.io).\r\n\r\nThe easy way is to add the source, so updates show up in AltStore or SideStore:\r\n\r\n```\r\nhttps://raw.githubusercontent.com/imxieyi/Kernarium/main/sideload/source.json\r\n```\r\n\r\nAlternatively, install the IPA by hand:\r\n\r\n1. Download `Andarium-1.1-16.ipa` on the device. It's about 1 GB.\r\n2. Open AltStore or SideStore, tap `+` in **My Apps** and pick the IPA.\r\n\r\nA few things to know:\r\n\r\n- iOS 26 or later is required.\r\n- The app uses the [Increased Memory Limit](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.kernel.increased-memory-limit) and [Extended Virtual Addressing](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.kernel.extended-virtual-addressing) entitlements.\r\n- A free Apple ID works, but the app expires after 7 days and must be refreshed in AltStore or SideStore.\r\n- With a free Apple ID, Android gets less memory. AltStore 2.2 or later keeps the increased memory limit, SideStore doesn't by default. Extended virtual addressing needs a paid developer account.\r\n- JIT is optional and experimental. To use it, assign the universal script to Andarium in [StikDebug](https://github.com/StikDebug/StikDebug) once, then open Andarium from StikDebug.\r\n- To update by hand, install the new IPA with the same Apple ID and the same tool. It replaces the old version and keeps your virtual machine.\r\n\r\n### Prebuilt artifacts\r\n- **android-6.18-…-ca1.tar.gz**: the accepted Android kernel bundle. Extract it into `.build/kernel/artifacts/`.\r\n- **lineage24-…-r29.tar.gz**: the accepted Android system release.\r\n- **lineage24-…-r29-aot.tar.gz**: the AOT artifact of that release. Extract both anywhere, then run `android/lineage-24/tools/install-release.py --source <dir>/lineage24-mainline6.18-4k-20261121-los24-r29 --aot-artifact <dir>/lineage24-mainline6.18-4k-20261121-los24-r29-aot`.",
+          "downloadURL": "https://github.com/imxieyi/Kernarium/releases/download/andarium-1.1/Andarium-1.1-16.ipa",
+          "size": 1248669708,
+          "minOSVersion": "26.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.developer.kernel.extended-virtual-addressing",
+          "com.apple.developer.kernel.increased-memory-limit",
+          "get-task-allow"
+        ],
+        "privacy": {
+          "NSCameraUsageDescription": "Andarium uses the camera only when you turn on Camera, so that apps in the virtual machine can use it.",
+          "NSLocalNetworkUsageDescription": "Apps running in Andarium use this to connect to devices on your local network, such as printers, media servers and computers, and ADB over network uses it to let a computer on your network connect to Andarium. Internet access doesn't need it.",
+          "NSLocationWhenInUseUsageDescription": "Andarium shares this device's location only when you turn on Location, so that apps in the virtual machine can use it.",
+          "NSMicrophoneUsageDescription": "Andarium records from the microphone only when you turn on Microphone, so that apps in the virtual machine can use it."
+        }
+      },
+      "version": "1.1",
+      "versionDate": "2026-11-22",
+      "versionDescription": "### What's new\r\n- **Root access**: apps you allow in Magisk can now run as root. Turn on Root access on Home, and the next start installs the official Magisk app.\r\n- **AOT**: Android's system libraries now run from code translated ahead of time, so Android runs faster. It is on by default, in Performance on Home.\r\n- **120 Hz**: on a ProMotion iPhone or iPad, Android can now run at 120 Hz for smoother motion, using more battery. It is off until you turn it on in Performance on Home.\r\n- **Add to Home Screen**: on iPhone and iPad with iOS 27, put an Android app's icon on the Home Screen, and open the app from there, from Shortcuts or with Siri.\r\n- **VoiceOver and TalkBack**: Andarium now works with VoiceOver. To hear Android's screen, turn on TalkBack under Accessibility.\r\n- **Frame rate when hot**: Android now lowers the frame rate only when the device is very hot. To keep it even then, set When hot to Full frame rate under Performance.\r\n- **Text messages**: Android can now receive a text message that you write. Choose Send text message… in Settings while Android is running, and it arrives as an incoming text.\r\n- **Update notice**: when a newer version is out, Home tells you and shows how to update. It checks once a day, and you can turn it off in Info.\r\n- **iOS 26**: the app now runs on iOS 26 or later.\r\n- Fixes:\r\n  - Fixed the virtual machine's Wi-Fi dropping briefly when you return to Andarium\r\n  - Fixed face scans failing in some apps that use the front camera\r\n  - Fixed connections hanging after the device moves from Wi-Fi to cellular data\r\n  - Fixed apps failing to reach servers for a while after the network returns\r\n  - VP9 videos now play with the device's hardware decoder\r\n\r\n### Sideloading\r\nYou can sideload the app with [AltStore](https://altstore.io) or [SideStore](https://sidestore.io).\r\n\r\nThe easy way is to add the source, so updates show up in AltStore or SideStore:\r\n\r\n```\r\nhttps://raw.githubusercontent.com/imxieyi/Kernarium/main/sideload/source.json\r\n```\r\n\r\nAlternatively, install the IPA by hand:\r\n\r\n1. Download `Andarium-1.1-16.ipa` on the device. It's about 1 GB.\r\n2. Open AltStore or SideStore, tap `+` in **My Apps** and pick the IPA.\r\n\r\nA few things to know:\r\n\r\n- iOS 26 or later is required.\r\n- The app uses the [Increased Memory Limit](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.kernel.increased-memory-limit) and [Extended Virtual Addressing](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.kernel.extended-virtual-addressing) entitlements.\r\n- A free Apple ID works, but the app expires after 7 days and must be refreshed in AltStore or SideStore.\r\n- With a free Apple ID, Android gets less memory. AltStore 2.2 or later keeps the increased memory limit, SideStore doesn't by default. Extended virtual addressing needs a paid developer account.\r\n- JIT is optional and experimental. To use it, assign the universal script to Andarium in [StikDebug](https://github.com/StikDebug/StikDebug) once, then open Andarium from StikDebug.\r\n- To update by hand, install the new IPA with the same Apple ID and the same tool. It replaces the old version and keeps your virtual machine.\r\n\r\n### Prebuilt artifacts\r\n- **android-6.18-…-ca1.tar.gz**: the accepted Android kernel bundle. Extract it into `.build/kernel/artifacts/`.\r\n- **lineage24-…-r29.tar.gz**: the accepted Android system release.\r\n- **lineage24-…-r29-aot.tar.gz**: the AOT artifact of that release. Extract both anywhere, then run `android/lineage-24/tools/install-release.py --source <dir>/lineage24-mainline6.18-4k-20261121-los24-r29 --aot-artifact <dir>/lineage24-mainline6.18-4k-20261121-los24-r29-aot`.",
+      "downloadURL": "https://github.com/imxieyi/Kernarium/releases/download/andarium-1.1/Andarium-1.1-16.ipa",
+      "size": 1248669708,
+      "_repo": "imxieyi/Kernarium"
     }
   ],
   "news": []
