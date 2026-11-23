@@ -30,6 +30,19 @@
       "category": "games",
       "asset": "\\.ipa$",
       "releases": 2
+    },
+    {
+      "repo": "StephenDev0/StikDebug",
+      "name": "StikDebug",
+      "description": "On-device JIT enabler and debugger using a pairing file and LocalDevVPN.",
+      "category": "developer"
+    },
+    {
+      "repo": "imxieyi/Kernarium",
+      "name": "Andarium",
+      "description": "Android 17 (LineageOS 24) running inside an app on iPhone and iPad. A14 or newer.",
+      "category": "utilities",
+      "asset": "^Andarium-.*\\.ipa$"
     }
   ]
 }
